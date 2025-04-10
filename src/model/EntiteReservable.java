@@ -3,15 +3,15 @@ package model;
 public abstract class EntiteReservable <T extends Formulaire> {
 
 	protected CalendrierAnnuel calendrier = new CalendrierAnnuel();
-	protected int identifiant;
+	protected int numero;
 
 	
-	public int getIdentifiant() {
-		return identifiant;
+	public int getNumero() {
+		return numero;
 	}
 	
-	public void setIdentifiant(int identifiant) {
-		this.identifiant = identifiant;
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 	
 	public boolean estLibre(T formulaire) {
@@ -20,5 +20,5 @@ public abstract class EntiteReservable <T extends Formulaire> {
 	
 	public abstract boolean compatible(T formulaire);
 	
-	public abstract void reserver(T formulaire);
+	public abstract Reservation reserver(T formulaire);
 }
