@@ -11,7 +11,7 @@ public class CentraleReservation <E extends EntiteReservable<F>, F extends Formu
 	
 	public int ajouterEntite(E entite) {
 		entites[nbEntite++] = entite;
-		entite.setNumero(entite.getNumero() + 1);
+		entite.setNumero(nbEntite);
 		return entite.getNumero();
 	}
 	
